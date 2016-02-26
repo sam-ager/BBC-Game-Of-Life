@@ -116,8 +116,8 @@ After determining if the cell is alive, this function would then run to determin
 def neighbourtest
         neighbour = Counter(new for c in world for new in offset(neighbour_cells, c))
         world = {c for c in counts
-                if counts[c] == 3, life == 1 #If the cell has 3 neighbour it shall live, giving it a integer of 1 
-				else if (counts[c] == <3 or 
+                if (counts[c] == 2,3, life == 1 #If the cell has 3 neighbour it shall live, giving it a integer of 1 
+				else if (counts[c] == <2 or 
 						counts [c] == >3 and c in world, life == 0 )} #If it has less or more than 3 neighbours it shall die, giving it an integer of 0
 						
 '''
